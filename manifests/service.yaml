@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myworkflowdemo
-  namespace: myworkflow-ns
+  name: myazworkflow
+  namespace: acraksdem-ns
 spec:
   type: LoadBalancer
   selector:
-    app: myworkflowdemo
+    app: myazworkflow
   ports:
     - protocol: TCP
       port: 3000

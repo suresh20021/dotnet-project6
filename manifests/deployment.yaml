@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myworkflowdemo
+  name: myazworkflow
   labels:
-    app: myworkflowdemo
-  namespace: myworkflow-ns
+    app: myazworkflow
+  namespace: acraksdem-ns
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myworkflowdemo
+      app: myazworkflow
   template:
     metadata:
       labels:
-        app: myworkflowdemo
+        app: myazworkflow
     spec:
       containers:
-        - name: myworkflowdemo
-          image: myworkflowacr.azurecr.io/myworkflow-img:latest
+        - name: myazworkflow
+          image: acraksdem.azurecr.io/acraksdem-img:latest
           ports:
             - containerPort: 3000
